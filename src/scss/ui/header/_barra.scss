@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.barra{
+        display: flex;
+        justify-content: center;
+        display: none;
+        @include m.tablet { 
+                justify-content: space-between;
+                flex-direction: row;
+        }
+        .barra__navegacion{
+                @include m.tablet { 
+                        align-items: center;
+                        justify-content: space-around;
+                        flex-direction: row;
+                 }
+                .barra__link{
+                        color: v.$blanco;
+                }
+         }
+}
